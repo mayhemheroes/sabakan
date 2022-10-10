@@ -6,6 +6,8 @@ func mayhemit(bytes []byte) int {
 
 	content := string(bytes)
 	var test sabakan.ImageIndex
+	var testImg sabakan.Image
+	test.Append(&testImg)
 	//_ = sabakan.IsValidImageID(content)
 	test.Remove(content)
 	return 0
