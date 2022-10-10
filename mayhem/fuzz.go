@@ -4,7 +4,7 @@ import "github.com/cybozu-go/sabakan/v2"
 
 func mayhemit(bytes []byte) int {
 
-	content := int(bytes)
+	content := string(bytes)
 	//var test sabakan.LeaseRange
 	//_ = sabakan.IsValidImageID(content)
 	//test.IP(content)
