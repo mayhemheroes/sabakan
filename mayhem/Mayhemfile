@@ -1,8 +1,8 @@
 # Namespaced project name that the target belongs to
-project: sakaban
+project: sabakan
 
 # Target name (should be unique within the project)
-target: sakaban
+target: sabakan
 
 # List of commands used to test the target
 cmds:

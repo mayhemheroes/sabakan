@@ -5,7 +5,9 @@ import "github.com/cybozu-go/sabakan/v2"
 func mayhemit(bytes []byte) int {
 
 	content := string(bytes)
-	_ = sabakan.IsValidImageID(content)
+	var test sabakan.ImageIndex
+	//_ = sabakan.IsValidImageID(content)
+	test.Remove(content)
 	return 0
 }
 
