@@ -9,7 +9,7 @@ func mayhemit(bytes []byte) int {
 	var testImg sabakan.Image
 	test.Append(&testImg)
 	//_ = sabakan.IsValidImageID(content)
-	test.Remove(content)
+	test.Find(content)
 	return 0
 }
 
