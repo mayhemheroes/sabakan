@@ -2,6 +2,7 @@ package fuzzIsValidImageID
 
 import "strconv"
 import "github.com/cybozu-go/sabakan/v2"
+import fuzz "github.com/AdaLogics/go-fuzz-headers"
 
 func mayhemit(bytes []byte) int {
 
@@ -13,12 +14,24 @@ func mayhemit(bytes []byte) int {
         switch num {
     
         case 0:
-			content := string(bytes)
+			fuzzConsumer := fuzz.NewConsumer(bytes)
+			var content string
+			err := fuzzConsumer.CreateSlice(&content)
+			if err != nil {
+					return 0
+			}
+
 			_ = sabakan.IsValidImageID(content)
 			return 0
 
 		default:
-			content := string(bytes)
+			fuzzConsumer := fuzz.NewConsumer(bytes)
+			var content string
+			err := fuzzConsumer.CreateSlice(&content)
+			if err != nil {
+					return 0
+			}
+
 			_ = sabakan.IsValidKernelParams(content)
 			return 0
 		}
