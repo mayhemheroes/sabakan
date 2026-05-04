@@ -1,4 +1,4 @@
-FROM golang:1.23 as builder
+FROM golang:1.21 as builder
 
 COPY . /sabakan
 WORKDIR /sabakan/mayhem
